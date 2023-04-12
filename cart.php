@@ -1,7 +1,15 @@
 <?php
+$title="Cart";
 require_once ('header.php');
+
 ?>
 <style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .page-title {
     color: white;
     font-weight: bold;
@@ -28,6 +36,24 @@ require_once ('header.php');
     -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
     vertical-align: middle;
+}
+
+.add-to-cart-btn {
+    width: 250px;
+    margin: auto;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0 0 0 0;
+    color: white;
+    background-color: #121F6A;
+    border: none;
+}
+
+.add-to-cart-btn:hover {
+    color: #121F6A;
+    background-color: white;
+    border: 4px solid #121F6A;
 }
 </style>
 
@@ -98,7 +124,7 @@ require_once ('header.php');
                                 <div class="d-flex align-items-center justify-content-center"
                                     style="padding-top:18px;">
                                     <button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart('.$item['id'].', -1)">-</button>
-                                    <input type="number" id="num_'.$item['id'].'" value="'.$item['num'].'" class="form-control" style="width: 90px; border-radius: 0px" onchange="fixCartNum('.$item['id'].')"/>
+                                    <input type="number" id="num_'.$item['id'].'" value="'.$item['num'].'" class="form-control" style="text-align:center;width: 90px; border-radius: 0px" onchange="fixCartNum('.$item['id'].')"/>
                                         <button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart('.$item['id'].', 1)">+</button>
                                 </div>
                             </td>
@@ -132,7 +158,8 @@ require_once ('header.php');
 
                 <div class="float-right">
                     <a href="checkout.php"><button type="button" style="font-weight: 600; font-size:15px;"
-                            class=" btn btn-lg btn-primary mt-2">Checkout</button></a>
+                            class=" btn btn-lg btn-primary mt-2 add-to-cart-btn"><i
+                                class="fa-regular fa-credit-card"></i>&ensp;CHECKOUT</button></a>
                 </div>
 
             </div>

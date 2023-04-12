@@ -1,4 +1,5 @@
 <?php
+$title="Category";
 require_once ("header.php");
 $category_id = getGet('id');
 if($category_id == null || $category_id ==''){
@@ -7,6 +8,7 @@ else{
     $sql = "select product.*, category.name as category_name from product left join category on product.category_id = category.id where product.category_id = $category_id and deleted = 0 order by updated_at asc limit 0,8 ";
 }
 $categoryItem  = executeResult($sql);
+
 ?>
 <style>
 body {
@@ -178,10 +180,10 @@ body {
                 </div>
             </a>
             <a href="detail.php?id='.$item['id'].'">
-                <p class="tittle-hover mt-2" style="font-weight:bold; font-family: Montserrat ,sans-serif;" class=" h6">
+                <p class="tittle-hover mt-2" style="font-weight:bold;color:black; font-size:18px" class=" h6">
                     '.$item['title'].'</p>
             </a>
-            <p style="font-weight:bold; font-family: Montserrat ,sans-serif;color:black; margin-top:-8px;" class="h6">
+            <p style="font-weight:bold; color:gray; margin-top:-8px;" class="h6">
                 $'.number_format($item['discount']).'</p>
             <div style="height: 40px;"></div>
         </div>';

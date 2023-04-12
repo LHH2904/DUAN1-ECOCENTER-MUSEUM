@@ -1,5 +1,6 @@
 <?php
- include('header.php')
+ $title="Visit";
+ include('header.php');
 ?>
 
 <style>

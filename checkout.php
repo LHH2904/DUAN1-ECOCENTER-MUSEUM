@@ -1,4 +1,5 @@
 <?php
+$title="Checkout";
 require_once ('header.php');
 ?>
 <style>
@@ -44,6 +45,24 @@ require_once ('header.php');
     -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
     vertical-align: middle;
+}
+
+.ticket-order-btn {
+    width: 250px;
+    margin: auto;
+    height: 60px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: #121F6A;
+    font-size: 17px;
+
+}
+
+.ticket-order-btn:hover {
+    border: 4px solid #121F6A;
+    background-color: white;
+    color: #121F6A;
 }
 </style>
 <div class="row align-items-center position-relative"
@@ -121,8 +140,8 @@ require_once ('header.php');
                     <textarea name="note" class="form-control" id="" cols="50" rows="3"></textarea>
                 </div>
                 <hr class="mb-4">
-                <button class="checkout-eco-btn" style="font-size:18px; font-weight:bold;" type="submit">Continue to
-                    checkout</button>
+                <button type="submit" class="ticket-order-btn"><i class="fa-solid fa-ticket"></i></i>&ensp; COMPLETE
+                    &ensp;<i class="fa-solid fa-chevron-right"></i></button>
             </form>
             <!-- <button class="btn btn-danger">Checkout MOMO</button> -->
         </div>

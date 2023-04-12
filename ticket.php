@@ -1,7 +1,15 @@
 <?php
-include('header.php')
+$title="Ticket";
+include('header.php');
+
 ?>
 <style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .page-title {
     color: white;
     font-weight: bold;
@@ -66,22 +74,23 @@ include('header.php')
 }
 
 .ticket-order-btn {
-    width: 350px;
-    height: 70px;
+    width: 250px;
+    margin: auto;
+    height: 60px;
 
     color: white;
     font-weight: bold;
     border: none;
     /* background-image: linear-gradient(to right, #1B3872 , #101F53); */
-    background-color: #EFBF29;
+    background-color: #121F6A;
     font-size: 17px;
 
 }
 
 .ticket-order-btn:hover {
-    border: 4px solid #EFBF29;
+    border: 4px solid #121F6A;
     background-color: white;
-    color: #EFBF29;
+    color: #121F6A;
 }
 </style>
 <div class="row align-items-center position-relative"
@@ -114,24 +123,28 @@ include('header.php')
                         <p class="col-4" style="height:30px;"><span
                                 style="color:#162B63;font-size:20px;font-weight:bold">Adult</span><br>Ages 12+</p>
                         <p class="col-3 text-right" style="height:30px; padding-top:15px;">$20.95</p>
-                        <p style="height:30px; padding-top:10px;z-index:10"
+                        <p style="height:30px; padding-top:20px;z-index:10; margin-left:20px;"
                             class="quantity col-3 d-flex   align-items-center justify-content-center">
-                            <button type="button" class="quantity__minus btn btn-primary">-</button>
-                            <input style="width: 50px;" class="quantity__input" type="number" value="0" min="0"
-                                name="num_adult">
-                            <button type="button" class="quantity__plus btn btn-primary">+</button>
+                            <button type="button" class="quantity__minus btn btn-primary"
+                                style="background-color:#121F6A; border:1px solid black; color:white;  border-radius: 4px 0px 0px 4px;font-weight:bold; width:30px;height:30px;padding: 0px;">-</button>
+                            <input style="width: 50px;height:30px; text-align:center; border:1px solid #162B63"
+                                class="quantity__input" type="number" value="0" min="0" name="num_adult">
+                            <button type="button" class="quantity__plus btn btn-primary"
+                                style="background-color:#121F6A; border:1px solid black; color:white; border-radius: 0px 4px 4px 0px;font-weight:bold;width:30px;height:30px;padding: 0px;">+</button>
                         </p>
                     </div>
                     <div class="d-flex" style=" gap:50px;margin-bottom:50px;">
                         <p class="col-4" style="height:30px;"><span
                                 style="color:#162B63;font-size:20px;font-weight:bold">Child</span><br>Ages 3-11</p>
                         <p class="col-3 text-right" style="height:30px; padding-top:15px;">$10.95</p>
-                        <p style="height:30px; padding-top:10px;z-index:10"
+                        <p style="height:30px; padding-top:20px;z-index:10; margin-left:20px;"
                             class="quantity col-3 d-flex   align-items-center justify-content-center">
-                            <button type="button" class="quantity__minus btn btn-primary">-</button>
-                            <input style="width: 50px;" class="quantity__input" type="number" value="0" min="0"
-                                name="num_child">
-                            <button type="button" class="quantity__plus btn btn-primary">+</button>
+                            <button type="button" class="quantity__minus btn btn-primary"
+                                style="background-color:#121F6A; border:1px solid black; color:white;  border-radius: 4px 0px 0px 4px;font-weight:bold; width:30px;height:30px;padding: 0px;">-</button>
+                            <input style="width: 50px; text-align:center;height:30px;; border:1px solid #162B63"
+                                class="quantity__input" type="number" value="0" min="0" name="num_child">
+                            <button type="button" class="quantity__plus btn btn-primary"
+                                style="background-color:#121F6A; border:1px solid black; color:white; border-radius: 0px 4px 4px 0px;font-weight:bold;width:30px;height:30px;padding: 0px;">+</button>
                         </p>
                     </div>
 
@@ -144,7 +157,7 @@ include('header.php')
                 <!-- Submit button -->
                 <button type="submit" class="ticket-order-btn "><i class="fa-solid fa-ticket"></i></i>&ensp; ADD
                     TICKET
-                    TO ORDER&ensp;<i class="fa-solid fa-chevron-right"></i></button>
+                    &ensp;<i class="fa-solid fa-chevron-right"></i></button>
     </form>
 </div>
 <div class="col-4 col-md-4 order-md-2 mb-4">

@@ -1,4 +1,5 @@
 <?php
+$title="Eco Center";
 include('header.php');
 $sql = "select * from explore where id = 28";
 $firstExplore = executeResult($sql,true);
@@ -6,9 +7,7 @@ $sql = "select * from explore ORDER BY id DESC LIMIT 3 ";
 $AllExplore = executeResult($sql);
 $sql = "select * from product  where deleted = 0 order by id asc limit 3";
 $products = executeResult($sql);
-// echo "<pre>";
-// var_dump($products);
-// echo "</pre>";
+
 ?>
 <style>
 /* button */
@@ -105,7 +104,7 @@ $products = executeResult($sql);
                 <p class="carousel-caption-title2"
                     style="font-weight:800; font-size:65px;width: 600px;line-height:80px;"><?=$firstExplore['title']?>
                 </p>
-                <a href="explore.php"><button class=" main-button-edit color-1"><i
+                <a href="explore.php?id=28"><button class=" main-button-edit color-1"><i
                             class="fa-solid fa-hurricane"></i></i>&ensp;
                         EXPLORE NOW</button></a>
                 <p class="carousel-caption-title4"><i style="color:#EFBF29"

@@ -13,11 +13,12 @@ $menuCate = executeResult($sql);
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title><?=$title?></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="asset/img/iconlogo.png" type="image/gif" sizes="16x16">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -80,8 +81,11 @@ $menuCate = executeResult($sql);
                                 echo 
                                 '<li class="nav-item active" style="color:#C5C5C5"><a href="admin/authen/login.php">ACCOUNT</a></li>';
                             }else{
-                                echo'<li class="nav-item active" style="font-weight:bold; font-size:12px;color:#C5C5C5; text-transform: uppercase;">'.$user['fullname'].'</li>
-                                <li class="nav-item active"><a href="admin/authen/logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>';                               
+                                echo'<li class="nav-item active" style="font-weight:bold; font-size:12px;color:#C5C5C5; text-transform: uppercase;margin-bottom:-2.5px;">'.$user['fullname'].'</li>
+                            
+                                <li class="nav-item active"><a href="bill.php">BILLS</a></li>
+                                <li class="nav-item active"><a href="admin/authen/logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                                ';                               
                             }
                            ?>
                             <!-- khi dang nhap -->

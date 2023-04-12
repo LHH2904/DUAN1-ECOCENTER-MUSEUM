@@ -1,4 +1,5 @@
 <?php
+$title="Contact";
 require_once ('header.php');
 if(!empty($_POST)){
     $firstname = getPost('firstname');
@@ -11,7 +12,9 @@ if(!empty($_POST)){
     $sql="INSERT INTO `feedback`(`firstname`, `lastname`, `email`, `phone_number`, `subject_name`, `note`, `created_at`, `updated_at`, `status`) VALUES ('$firstname','$lastname','$email','$phone_number','$subject','$note','$created_at','$updated_at','0')";
     execute($sql);
 }
+
 ?>
+
 <style>
 .page-title {
     color: white;

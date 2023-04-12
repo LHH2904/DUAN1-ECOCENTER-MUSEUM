@@ -1,4 +1,5 @@
 <?php
+$title="Checkout-ticket";
 include('header.php');
 if(isset($_POST['num_adult'])) {
     $num_adult = $_POST['num_adult'];
@@ -96,21 +97,22 @@ if(isset($_POST['num_child'])) {
 }
 
 .ticket-order-btn {
-    width: 40%;
-    height: 70px;
+    width: 250px;
+    margin: auto;
+    height: 60px;
     color: white;
     font-weight: bold;
     border: none;
     /* background-image: linear-gradient(to right, #1B3872 , #101F53); */
-    background-color: #EFBF29;
+    background-color: #121F6A;
     font-size: 17px;
 
 }
 
 .ticket-order-btn:hover {
-    border: 4px solid #EFBF29;
+    border: 4px solid #121F6A;
     background-color: white;
-    color: #EFBF29;
+    color: #121F6A;
 }
 </style>
 <div class="row align-items-center position-relative"
@@ -165,7 +167,7 @@ if(isset($_POST['num_child'])) {
             </div>
             <!-- Submit button -->
             <button type="submit" class="ticket-order-btn"><i class="fa-solid fa-ticket"></i></i>&ensp; COMPLETE
-                ORDER&ensp;<i class="fa-solid fa-chevron-right"></i></button>
+                &ensp;<i class="fa-solid fa-chevron-right"></i></button>
             </form>
         </div>
         <div class="col-4 col-md-4 order-md-2 mb-4">
@@ -199,7 +201,7 @@ function completeCheckoutTicket() {
             'num_child': <?=$num_child?>,
         },
         function() {
-            window.open('complete.php', '_self');
+            window.open('complete-ticket.php', '_self');
         })
     return false;
 }

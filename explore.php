@@ -1,4 +1,5 @@
 <?php
+$title="Explore";
 include ('header.php');
 $exploreId = getGet('id');
 $sql = "select * from explore where id = $exploreId";
@@ -13,6 +14,7 @@ JOIN explore_thumbnails ON explore.id = explore_thumbnails.explore_id
 WHERE explore.id != $exploreId 
 LIMIT 0,2";
 $otherExplores = executeResult($sql);
+
 ?>
 <style>
 body {

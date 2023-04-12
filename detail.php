@@ -1,14 +1,23 @@
 <?php
+
+
+$title="Detail";
 require_once ("header.php");
 $productId = getGet('id');
-
 $sql =  "Select product.*,category.name as category_name from product left join category on product.category_id = category.id where product.id = $productId and deleted = 0";
 $product  = executeResult($sql,true);
 $category_id = $product['category_id'];
 $sql = "select product.*,category.name as category_name from product left join category on product.category_id = category_id where product.category_id = $category_id and deleted = 0 limit 0,2";
 $relatedProduct = executeResult($sql);
+
 ?>
 <style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 body {
     background: #F7F7F7;
     /* background: white; */
@@ -193,7 +202,7 @@ body {
         </div>
         <div class="col-md-4" style="position: sticky; top: 15px; z-index: 9999;">
             <div
-                style="background-color:white;height: 640px; padding-left:10px; padding-top:10px;border:1px solid #E1E1E1;;">
+                style="background-color:white;height: 640px; padding-left:20px; padding-top:20px;border:1px solid #E1E1E1;;">
                 <h3 style="font-weight: 600; width: 80%;" class="mb-2 ">
                     <?=$product['title']?>
                 </h3>
@@ -209,21 +218,29 @@ body {
                             style="color:#121F6A; font-weight:bold;">Sign In</a></span>
                 </div>
                 <div class="amount">
-                    <p class="mr-5 h4">Số lượng</p>
-                    <button onclick="addMoreCart(-1)" type="button"
-                        class="minusAmount btn btn-outline-primary mr-3">-</button>
+                    <p class="mr-5" style="font-weight:bold">Quantity</p>
+                    <button onclick="addMoreCart(-1)" type="button" class="minusAmount btn btn-outline-primary"
+                        style="background-color:#121F6A; border:1px solid black; color:white;  border-radius: 4px 0px 0px 4px;font-weight:bold;height:37.5px;width:37.5px;margin-top:-1.5px;">-</button>
                     <input type="number" name="num" id="" value="1"
-                        style="max-width: 90px;border: solid #e0dede 1px; border-radius: 0px;" onchange="fixCartNum()"
-                        class="amountNumber">
-                    <button onclick="addMoreCart(1)" type="button"
-                        class="btn btn-outline-primary plusAmount ml-3">+</button>
+                        style="width: 60px;height:38px;border: solid #e0dede 1px; border-radius: 0px; text-align:center;margin-left:-4.5px;"
+                        onchange="fixCartNum()" class="amountNumber">
+                    <button onclick="addMoreCart(1)" type="button" class="btn btn-outline-primary plusAmount"
+                        style="background-color:#121F6A; border:1px solid black; color:white; border-radius: 0px 4px 4px 0px;margin-left:-5px;font-weight:bold;height:37.5px;width:37.5px;margin-top:-1.5px;">+</button>
                 </div>
-                <button onclick="addCart(<?=$product['id']?>,$('[name=num]').val())" style="width: 80%;margin:auto"
-                    type="button" class="btn btn-success mt-3"><i class="fa fa-shopping-cart mr-2"
-                        aria-hidden="true"></i>Thêm vào giỏ
-                    hàng</button>
-                <a href="cart.php"><button style="width: 80%;margin:auto" type="button" class="btn btn-info mt-3"><i
-                            class="fa fa-heart mr-2" aria-hidden="true"></i>Xem giỏ hàng</button></a>
+                <button onclick="addCart(<?=$product['id']?>,$('[name=num]').val())" type="button"
+                    class=" mt-3 add-to-cart-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    &ensp;
+                    Add to basket
+                </button>
+
+                <!-- <a href="cart.php"><button 
+                type="button" class=" mt-3 add-to-cart-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                &ensp;
+                View Your Cart
+                </button></a> -->
+
 
 
                 <div class="return mt-3" style="width: 90%;">
@@ -256,10 +273,10 @@ body {
                 </div>
             </a>
             <a href="detail.php?id='.$item['id'].'">
-                <p class="tittle-hover mt-2" style="font-weight:bold; font-family: Montserrat ,sans-serif;" class=" h6">
+                <p class="tittle-hover mt-2" style="font-weight:bold;color:black; font-size:18px" class=" h6">
                     '.$item['title'].'</p>
             </a>
-            <p style="font-weight:bold; font-family: Montserrat ,sans-serif;color:black; margin-top:-8px;" class="h6">
+            <p style="font-weight:bold; color:gray; margin-top:-8px;"  class="h6">
                 $'.number_format($item['discount']).'</p>
             <div style="height: 40px;"></div>
         </div>';
