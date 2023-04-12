@@ -1,0 +1,245 @@
+body{
+    font-family: 'Poppins';
+    overflow-x: hidden; 
+}
+
+.ticket-button{
+    width: 132px;
+    background-color: white;
+    color: #121F6A;
+    font-weight: bold;
+    border-radius: 0 0 0 0;
+}
+
+.ticket-button:hover{
+    background-color: rgba(252, 252, 252, 0.5);
+    color:white;
+}
+
+.navbar-nav > li{
+    margin-left:40px;
+  }
+
+.nav-ecocenter{
+    font-weight: bold;
+    background-color: none;
+    color:white;
+
+}
+.nav-ecocenter:hover{
+    color:#C5C5C5;
+}
+
+
+
+
+.nav-ecocenter-small ul li a{
+    color:#C5C5C5;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nav-eco-small{
+    background-color: transparent;
+    z-index: 99;
+    padding-top:0;
+    height: 50px;
+}
+
+.nav-eco-small-content{
+    margin-right: -15px !important;
+}
+
+.nav-ecocenter-small > ul > li{
+    margin-top: 40px;
+    margin-left:30px;
+    list-style: none;
+}
+
+.nav-eco-main{
+    background-color: transparent;
+    z-index: 99;
+    padding-top:0;
+    height: 100px;
+}
+
+
+
+
+/* slider */
+
+
+
+
+.carousel-indicators{
+    position: absolute;
+    top:50%;
+   left: -80%;
+    display:grid;
+    padding-bottom: 15%;
+}
+
+.carousel-indicators > li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.carousel-caption{
+    position: absolute;
+    top:35%;
+    left: 20%;
+    text-align: left;
+    z-index: 1000;
+}
+
+.full-img {
+    background-image: url("asset/img/art.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* slider */
+
+/* video */
+
+.outer-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.inner-container {
+    position: relative;
+}
+video {
+    width: 103.5%;
+    height: 100%;
+}
+.video-overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 20px;
+    width: 103.5%;
+    height: 98.8%;
+    background-color: rgba(43, 60, 157, 0.7);
+}
+
+.video-overlay1{
+    position: absolute;
+    right: -3.5%;
+    top: 80%;
+    font-size: 15px;
+    color:white;
+    font-weight: bold;
+    width: 30%;
+    height: 10%;
+    background-color: rgba(6, 15, 63);
+}
+
+.video-overlay1-content{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* video */
+
+
+/*-------------------------------------------------------- EXPLORE PAGE START ---------------------------------------*/
+
+
+.carousel-caption-button-edit{
+    /* position: absolute;
+    top: 68%;
+    left: 59%; */
+    width: 230px;
+    height: 70px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-radius: 0 0 0 0;
+    color: white;
+    background-color: #EFBF29;
+    cursor: pointer;
+}
+
+.carousel-caption-button-edit:hover{
+    color: #EFBF29;
+    background-color: white !important;
+    border:3px solid #EFBF29 !important;
+}
+
+.overview-list{
+    text-align: left;
+    margin-top: 9%;
+    margin-left: 20%;
+}
+.overview-list ul li{
+    list-style-type: none;
+    display: inline;
+    padding-right: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+
+.overview-content{
+    text-align: left;
+    color:white;
+    font-family: 'Marcellus', serif;
+    width: 600px;
+    margin-left: 24.5%;
+    margin-top: 60px;
+}
+
+.overview-title1{
+    font-size: 25px;
+}
+.overview-title2{
+    text-decoration: underline;
+}
+
+
+.overview-note{
+    margin-top: 80px; 
+}
+
+.overview-note ul li{
+    list-style-type: none;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.overview-note ul li i{
+   color:#EFBF29;
+}
+
+
+/* .slideshow-explore{
+
+}
+
+.slideshow-explore-inner{
+
+} */
+
+
+
+/*-------------------------------------------------------- EXPLORE PAGE END---------------------------------------*/
+
+
+
+/*-------------------------------------------------------- STORE PAGES START---------------------------------------*/
+.page-title-store{
+    color: white;
+}
+
+
+/*-------------------------------------------------------- STORE PAGES END---------------------------------------*/

@@ -1,0 +1,192 @@
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	
+  } 
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+	/* nav small */
+	.nav-eco-small{
+		background-color: #121f6a;
+		z-index: 99;
+		height: 60px;
+	}
+
+	.nav-eco-small-content{
+		overflow: hidden !important;
+		margin-right: 0px !important;
+	}
+
+	
+	.nav-eco-small-content li{
+		display:inline-block !important;
+
+	}
+	.nav-ecocenter-small > ul > li{
+		margin-top: 20px;
+		margin-left:0px !important;
+		list-style: none;
+	}
+		/*------------ nav small -----------*/
+
+
+
+
+
+
+	/* ------------------------nav main------------------------*/
+	.nav-eco-main{
+		background-color: #121f6a;
+		z-index: 99;
+		padding-top:0;
+	   
+	}
+	/* ------------------------nav main------------------------*/
+
+
+
+	/*------------------------- slider ------------------------*/
+.slider-exhibit{
+    margin-top:0px;
+}
+
+.carousel-item img{
+	width: 150% !important;
+}
+
+.carousel-caption-title1{
+	font-size: 12px !important;
+}
+.carousel-caption-title2{
+	margin-top: -35px;
+	font-size: 25px !important;
+}
+.carousel-caption-title3{
+	margin-top: -35px;
+	font-size: 12px !important;
+}
+.carousel-caption-title4 a{
+	
+	font-size: 12px !important;
+}
+
+.carousel-indicators{
+    position: absolute;
+    top:50%;
+   	left: 75%!important;
+    display:grid;
+    padding-bottom: 15%;
+}
+
+.carousel-indicators > li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+
+}
+
+.carousel-caption{
+    position: absolute;
+    top:25%;
+    left: 10%;
+    text-align: left;
+}
+
+.full-img {
+    background-image: url("asset/img/art.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-indicators{
+    position: absolute;
+    top:40%;
+   	left: 70%;
+
+}
+
+	/*------------------------- slider ------------------------*/
+
+
+
+
+
+
+	/* ----------------------session FALL FORWARD ---------------*/
+
+	.about-us-thumbnail{
+		margin-top: 50%;
+	}
+
+	.outer-container{
+		margin-top: 0%;
+	}
+
+	.video-overlay1{
+		position: absolute;
+		right: 0;
+		top: 67%;
+		font-size: 15px;
+		color:white;
+		font-weight: bold;
+		width: 40%;
+		height: 17%;
+		background-color: rgba(6, 15, 63);
+	}
+
+
+	.robot{
+		height: 1200px !important;
+		margin-top: 50% !important;
+	}
+
+	.robot img{
+		margin-top: -70%;
+	}
+	.robot-content{
+		top:-200px!important;
+		left: 50% !important;
+	}
+
+	.quote{
+
+		height: 500px !important;
+	}
+
+	.support{
+		position: absolute;
+		width: 300px;
+		top: -200px;
+		left: 30%;
+	}
+
+	.support-title2{
+		font-size: 40px !important;
+	}
+
+
+/* -------------------------EXPLORE  ---------------------*/
+
+.carousel-caption-button{
+    position: absolute;
+    top: 82%;
+	left: 0;
+ 
+}
+.carousel-caption-button-edit{
+    width: 490px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0 0 0 0;
+    color: white;
+    background-color: #EFBF29;
+}
+
+
+/* -------------------------EXPLORE  ---------------------*/
+  }
