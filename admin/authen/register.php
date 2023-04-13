@@ -13,7 +13,7 @@ session_start();
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Register</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -59,22 +59,22 @@ body {
 
                                     <h5 class="fw-normal  pb-3  ml-4" style="letter-spacing: 1px;">Sign In</h5>
                                     <!-- form -->
-                                    <form method="POST" onsubmit="return validateForm()" action="" class="mx-1 mx-md-4"
-                                        enctype="multipart/form-data">
+                                    <form method="POST" onsubmit="return validateForm(event)" action=""
+                                        class="mx-1 mx-md-4" enctype="multipart/form-data">
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label">Your Name</label>
-                                                <input name="fullname" required="true" type="text" class="form-control"
-                                                    id="usr">
+                                                <input id="name" name="fullname" required="true" type="text"
+                                                    class="form-control" id="usr">
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label">Your Email</label>
-                                                <input name="email" required="true" type="email" class="form-control"
-                                                    id="email">
+                                                <input id="email" name="email" required="true" type="email"
+                                                    class="form-control" id="email">
                                             </div>
                                         </div>
                                         <div class="d-flex flex-row align-items-center mb-4">
@@ -85,7 +85,6 @@ body {
                                                     class="form-control" id="pwd">
                                             </div>
                                         </div>
-
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
@@ -94,6 +93,7 @@ body {
                                                     id="confirmation_pwd">
                                             </div>
                                         </div>
+                                        <div id="notifi" class="text-danger mb-1"></div>
                                         <button onclick="validateForm()" type="submit"
                                             style="width: 100%; height: 45px; font-size:15px; font-weight: bold;"
                                             name="submit" class="btn  btn-dark btn-lg">SIGN UP</button>
@@ -105,12 +105,26 @@ body {
                 </div>
             </div>
             <script>
-            function validateForm() {
+            function validateForm(event) {
+                let name = document.getElementById('name').value;
+                let email = document.getElementById('email').value;
                 let pwd = document.querySelector("#pwd").value;
                 let confirmPwd = document.querySelector("#confirmation_pwd").value;
                 if (pwd != confirmPwd) {
-                    alert("Re enter your password")
-                    return false
+                    notifi.innerHTML = "Your confirm password is wrong";
+                    event.preventDefault();
+                }
+                if (name === "") {
+                    notifi.innerHTML = "Please text your Name";
+                    event.preventDefault();
+                }
+                if (email == "") {
+                    notifi.innerHTML = "Please text your Email";
+                    event.preventDefault();
+                }
+                if (pwd == "") {
+                    notifi.innerHTML = "Please text your Password";
+                    event.preventDefault();
                 }
                 return true;
             }

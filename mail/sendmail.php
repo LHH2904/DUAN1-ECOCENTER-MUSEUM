@@ -8,30 +8,25 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
-// require 'vendor/autoload.php';
-
-//Create an instance; passing `true` enables exceptions
-
 class Mailer{
     public function sendMail($titleMail,$descMail,$addressMail,$name){
         $mail = new PHPMailer(true);
         $mail->CharSet=('UTF-8');
         try {
-            //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'hominhquang01@gmail.com';                     //SMTP username
-            $mail->Password   = 'aeqwrhukfgaogqwd';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
+            $mail->isSMTP();                                            
+            $mail->Host       = 'smtp.gmail.com';                     
+            $mail->SMTPAuth   = true;                                   
+            $mail->Username   = 'eco.museum00@gmail.com';                     
+            $mail->Password   = 'gckjnfxmyqvcwuen';                            
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
+            $mail->Port       = 465;                                    
         
-            //Recipients
-            $mail->setFrom('hominhquang01@gmail.com', 'ECO CENTER');
-            $mail->addAddress($addressMail, $name);     //Add a recipient
-            $mail->isHTML(true);                                  //Set email format to HTML
+         
+            $mail->setFrom('eco.museum00@gmail.com', 'ECO CENTER');
+            $mail->addAddress($addressMail, $name);    
+            $mail->isHTML(true);                                
             $mail->Subject = $titleMail;
             $mail->Body    = '
             <html>

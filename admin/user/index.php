@@ -7,7 +7,7 @@ $baseUrl = '../';
 ?>
 <div class="row" style="margin-top:20px;">
     <div class="col-md-12">
-        <h3 class="text-warning mt-2">Quản lý người dùng</h3>
+        <h3 class="mt-2">User management</h3>
         <a href="editor.php"><button class="btn btn-success mb-2">Thêm tài khoản</button></a>
     </div>
     <table class="table table-bordered table-hover table-responsive">

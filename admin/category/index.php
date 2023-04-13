@@ -18,7 +18,7 @@ $baseUrl = '../';
 ?>
 <div class="row" style="margin-top:20px;">
     <div class="col-md-12">
-        <h2> Quản lý danh mục sản phẩm </h2>
+        <h2> Category management</h2>
     </div>
     <div class="col-md-6">
         <form method="post" action="index.php" onsubmit="return validateForm();">

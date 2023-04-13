@@ -34,7 +34,7 @@ session_start();
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h2 class="text-center">Đăng nhập</h2>
-                <h4 style="color:red" class="text-center"><?php echo $msg; ?></h4>
+                <h4 style="color:red" class="text-center"></h4>
             </div>
             <form method="POST" action="">
                 <div class="panel-body">
@@ -61,11 +61,11 @@ session_start();
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="icon" href="../../asset/img/iconlogo.png" type="image/gif" sizes="16x16">
     <!-- Bootstrap CSS -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,24 +97,26 @@ body {
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form method="post">
-                                        <div class="d-flex align-items-center mb-3 pb-1">
-                                            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                                            <span class="h1 fw-bold mb-0"><img src="../../asset/img/logo.png"
-                                                    style="width:30%" alt=""></span>
-                                        </div>
-                                        <h5 class="fw-normal  pb-3" style="letter-spacing: 1px;">Sign In</h5>
 
-                                        <div class="form-outline mb-4">
+                                    <div class="d-flex align-items-center mb-3 pb-1">
+                                        <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                        <span class="h1 fw-bold mb-0"><img src="../../asset/img/logo.png"
+                                                style="width:30%" alt=""></span>
+                                    </div>
+                                    <h5 class="fw-normal  pb-3" style="letter-spacing: 1px;">Sign In</h5>
+                                    <form method="post" onsubmit="checkLogin(event)">
+                                        <div class=" form-outline mb-4">
                                             <label class="form-label" for="form2Example17">Email</label>
-                                            <input name="email" type="email" id="form2Example17"
+                                            <input name="email" type="email" id="email"
                                                 class="form-control form-control-lg" style="height:45px" />
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="form2Example27">Password</label>
-                                            <input name="password" type="password" id="form2Example27"
+                                            <input name="password" type="password" id="password"
                                                 class="form-control form-control-lg" style="height:45px" />
                                         </div>
+                                        <div id="notifi" class="text-danger mb-1"></div>
+                                        <p class="text-danger"><?=$msg?></p>
                                         <div class="pt-1 mb-4">
                                             <button class="btn btn-dark btn-lg btn-block" style="height:45px"
                                                 type="submit">Login</button>
@@ -134,6 +136,26 @@ body {
             </div>
         </div>
     </section>
+    <script>
+    function checkLogin(event) {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const notifi = document.getElementById("notifi");
+
+        if (email == "") {
+            notifi.innerHTML = "Please text your Email";
+            event.preventDefault();
+        }
+        if (password == "") {
+            notifi.innerHTML = "Please text your password";
+            event.preventDefault();
+        }
+        if (email == "" && password == "") {
+            notifi.innerHTML = "Please text your infomation";
+            event.preventDefault();
+        }
+    }
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

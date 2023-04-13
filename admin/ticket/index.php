@@ -7,7 +7,7 @@ $baseUrl = '../';
 ?>
 <div class="row" style="margin-top:20px;">
     <div class="col-md-12">
-        <h3 class="text-warning mt-2">Quản lý vé</h3>
+        <h3 class=" mt-2">Ticket management</h3>
     </div>
     <table class="table table-bordered table-hover table-responsive">
         <thead>

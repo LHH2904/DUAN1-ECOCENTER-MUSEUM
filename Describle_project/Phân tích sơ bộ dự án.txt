@@ -8,6 +8,11 @@ I Phân tích dự án
 	+ Trang checkout
 	+ Trang thanh toán hoàn thành 
 	+ Trang liên hệ 
+	+ Trang checkout-ticket
+	+ Trang ticket
+	+ Trang complete
+	+ Trang triển lãm
+	+ Trang visit
 - Backend:
 	+ Tài khoản người dùng 
 		* Quản lý role ( admin,user )
@@ -17,7 +22,10 @@ I Phân tích dự án
 	+ Quản lý danh mục sản phẩm 
 	+ Quản lý sản phẩm 
 	+ Quản lý đơn hàng
+		* Chi tiết đơn hàng
 	+ Quản lý phản hồi người mua hàng
 	+ Quản lý vé
 	+ Quản lý triển lãm
 	+ Quản lý danh mục triển lám
+	+ Quản lý mail
+	+ Quản lý pdf

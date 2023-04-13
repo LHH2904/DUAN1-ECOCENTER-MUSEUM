@@ -242,9 +242,9 @@ body {
             <?=$explore['title']?> is included in Museum Entry and requires a separate, timed-entry ticket. Add this
             ticket to your order after selecting your Museum Entry date and time.<br><br>
             <p style="font-weight:bold;">Adults <span style="font-weight:300;font-style:italic;color:#CACACA">(age
-                    12+)</span> $20</p>
+                    12+)</span> $20.95</p>
             <p style="font-weight:bold;margin-top:-10px;">Children <span
-                    style="font-weight:300;font-style:italic;color:#CACACA">(age 3-11)</span> $10</p>
+                    style="font-weight:300;font-style:italic;color:#CACACA">(age 3-11)</span> $10.95</p>
             <a href="ticket.php"><button class="small-ticket mb-3">Ticket</button></a>
             <span style="font-style:italic;color:#CACACA;font-size:15px;"><br><?=$explore['title']?> <span
                     style="color:#CACACA;font-size:15px;font-style:normal;">spancontains themes of natural disaster and

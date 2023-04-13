@@ -69,7 +69,7 @@
                         <div class="row">
                             <div class="col mb-3">
                                 <p class="small text-muted mb-1">Date</p>
-                                <p>10 April 2021</p>
+                                <p><?=$orderItem['order_date']?></p>
                             </div>
                             <div class="col mb-3">
                                 <p class="small text-muted mb-1">Order No.</p>

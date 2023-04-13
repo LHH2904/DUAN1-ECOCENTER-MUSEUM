@@ -619,12 +619,11 @@ $user = getUserToken();
                                                                 y="123" text-anchor="middle" dominant-baseline="auto"
                                                                 font-size="15px" font-weight="500" fill="#566a7f"
                                                                 class="apexcharts-text apexcharts-datalabel-label"
-                                                                style="font-family: &quot;Public Sans&quot;;">Growth</text><text
+                                                                style="font-family: quot;">Growth</text><text
                                                                 id="SvgjsText1826" font-family="Public Sans" x="108"
                                                                 y="99" text-anchor="middle" dominant-baseline="auto"
                                                                 font-size="22px" font-weight="500" fill="#566a7f"
-                                                                class="apexcharts-text apexcharts-datalabel-value"
-                                                                style="font-family: &quot;Public Sans&quot;;">78%</text>
+                                                                class="apexcharts-text apexcharts-datalabel-value">78%</text>
                                                         </g>
                                                     </g>
                                                 </g>
@@ -1054,8 +1053,8 @@ $user = getUserToken();
                                                         id="SvgjsText1904" font-family="Public Sans" x="70.5" y="71.5"
                                                         text-anchor="middle" dominant-baseline="auto" font-size="1.5rem"
                                                         font-weight="400" fill="#566a7f"
-                                                        class="apexcharts-text apexcharts-datalabel-value"
-                                                        style="font-family: &quot;Public Sans&quot;;">38%</text></g>
+                                                        class="apexcharts-text apexcharts-datalabel-value">38%</text>
+                                                </g>
                                             </g>
                                             <line id="SvgjsLine1905" x1="0" y1="0" x2="141" y2="0" stroke="#b6b6b6"
                                                 stroke-dasharray="0" stroke-width="1" stroke-linecap="butt"
@@ -1719,7 +1718,7 @@ $user = getUserToken();
                                 <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                     <div class="me-2">
                                         <small class="text-muted d-block mb-1">Wallet</small>
-                                        <h6 class="mb-0">Mac'D</h6>
+                                        <h6 class="mb-0">Mac' D</h6>
                                     </div>
                                     <div class="user-progress d-flex align-items-center gap-1">
                                         <h6 class="mb-0">+270.69</h6> <span class="text-muted">USD</span>

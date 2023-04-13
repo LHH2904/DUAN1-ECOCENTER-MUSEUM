@@ -97,7 +97,7 @@
                     <hr class="mb-4 mt-0 d-inline-block mx-auto"
                         style="width: 60px; background-color: #121F6A; height: 2px" />
                     <p><i class="fas fa-home mr-3"></i> Sai Gon, SG 2023, VN</p>
-                    <p><i class="fas fa-envelope mr-3"></i> ecocenter@gmail.com</p>
+                    <p><i class="fas fa-envelope mr-3"></i> eco.center00@gmail.com</p>
                     <p><i class="fas fa-phone mr-3"></i> + 84 935 15 3639</p>
                 </div>
                 <!-- Grid column -->

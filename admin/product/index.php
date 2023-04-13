@@ -7,7 +7,7 @@ $baseUrl = '../';
 ?>
 <div class="row" style="margin-top:20px;">
     <div class="col-md-12">
-        <h3 class="text-warning mt-2">Quản lý sản phẩm</h3>
+        <h3 class="mt-2">Product management</h3>
         <a href="editor.php"><button class="btn btn-success mb-2">Thêm sản phẩm</button></a>
     </div>
     <table class="table table-bordered table-hover table-responsive">
@@ -30,7 +30,7 @@ $baseUrl = '../';
                             <th>'.(++$index).'</th>
                             <td><img src = "'.fixUrl($item['thumbnail']).'" style="height: 100px;" /></td>
                             <td>'.$item['title'].'</td>
-                            <td>'.number_format($item['discount']).' vnd'.'</td>
+                            <td>'.number_format($item['discount']).' $'.'</td>
                             <td>'.$item['category_name'].'</td>
 
                             <td style="width: 50px">

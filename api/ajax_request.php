@@ -29,8 +29,8 @@ function completeCheckout(){
 	$address = getPost('address');
 	$note = getPost('note');
 	$user = getUserToken();	
-	$userId = 0;
-	if($user != null){
+	$userId = 6;
+	if($user != null ){
 		$userId = $user['id'];
 	}
 	$orderDate = date('Y-m-d H:i:s');
@@ -1435,9 +1435,9 @@ function completeCheckoutTicket(){
               <table style="width: 100%">
                 <tbody>
                   <tr>
-                    <td colspan="2">
-                      <h2><span class="il">ECO</span> CENTER</h2>
-                      <p>
+                    <td colspan="2" style="color: #121F6A;">
+                      <h2 style="color: #121F6A;"><span class="il" >ECO</span> CENTER</h2>
+                      <p style="color: #121F6A;">
                         <span class="il">Eco Center</span> Sai Gon<br />599 Le Duan, District 1, Ho Chi Minh City
                       <br />(+84) 93515 3639
                       </p>
@@ -1577,7 +1577,7 @@ function completeCheckoutTicket(){
           <tr>
             <td
               style="text-align: center; padding: 8px; border: 1px solid #ccc">
-              1
+              2
             </td>
             <td style="text-align: center; padding: 8px; border: 1px solid #ccc">
               CHILDREN
