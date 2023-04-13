@@ -76,39 +76,47 @@ $billsOrder = executeResult($sql);
         <div class="row d-flex  ">
             <!-- order -->
             <?php
-            foreach($billsOrder as $item){
-                echo '     <div class="col-lg-8 col-xl-6 mt-4">
-                <div class="card border-top border-bottom border-3" style="border-color: #121F6A !important;">
-                    <div class="card-body p-5">
-
-                        <p class="lead fw-bold mb-5" style="color: #121F6A;font-weight:bold">Purchase Reciept</p>
-
-                        <div class="row">
-                            <div class="col mb-3">
-                                <p class="small text-muted mb-1">Date</p>
-                                <p>'.$item['order_date'].'</p>
+           if($billsOrder ==null || $billsOrder ==''){
+            echo '<div class="alert alert-danger">
+            <strong>SORRY</strong> THERE IS NO ORDER :(
+          </div>';
+           }else{
+            {
+                foreach($billsOrder as $item){
+                    echo '     <div class="col-lg-8 col-xl-6 mt-4">
+                    <div class="card border-top border-bottom border-3" style="border-color: #121F6A !important;">
+                        <div class="card-body p-5">
+    
+                            <p class="lead fw-bold mb-5" style="color: #121F6A;font-weight:bold">Purchase Reciept</p>
+    
+                            <div class="row">
+                                <div class="col mb-3">
+                                    <p class="small text-muted mb-1">Date</p>
+                                    <p>'.$item['order_date'].'</p>
+                                </div>
+                                <div class="col mb-3">
+                                    <p class="small text-muted mb-1">Order No.</p>
+                                    <p>'.$item['code'].'</p>
+                                </div>
                             </div>
-                            <div class="col mb-3">
-                                <p class="small text-muted mb-1">Order No.</p>
-                                <p>'.$item['code'].'</p>
+    
+                            <p class="fw-bold mb-2 pb-2" style="color: #121F6A;">Name:'.$item['fullname'].'</p>
+                            <p class=" fw-bold mb-2 pb-2" style="color: #121F6A;">Address: '.$item['address'].'</p>
+                            <p class=" fw-bold mb-2 pb-2" style="color: #121F6A;">Phone: '.$item['phone_number'].'</p>
+                            <div class="row my-4">
+                                <div class="col-md-4">
+                                    <p class="lead fw-bold mb-0" style="color: #121F6A;font-weight:bold">TOTAL: $'.$item['total_money'].'</p>
+                                </div>
+                                <a href="billdetail.php?id='.$item['id'].'"><button class="bill-btn"
+                                        >Click
+                                        to See</button></a>
                             </div>
-                        </div>
-
-                        <p class="fw-bold mb-2 pb-2" style="color: #121F6A;">Name:'.$item['fullname'].'</p>
-                        <p class=" fw-bold mb-2 pb-2" style="color: #121F6A;">Address: '.$item['address'].'</p>
-                        <p class=" fw-bold mb-2 pb-2" style="color: #121F6A;">Phone: '.$item['phone_number'].'</p>
-                        <div class="row my-4">
-                            <div class="col-md-4">
-                                <p class="lead fw-bold mb-0" style="color: #121F6A;font-weight:bold">TOTAL: $'.$item['total_money'].'</p>
-                            </div>
-                            <a href="billdetail.php?id='.$item['id'].'"><button class="bill-btn"
-                                    >Click
-                                    to See</button></a>
                         </div>
                     </div>
-                </div>
-            </div>';
-            }
+                </div>';
+                }
+               }
+           }
             ?>
             <!-- order -->
         </div>

@@ -9,19 +9,6 @@ $baseUrl = '../';
     }
     $sql = "SELECT * FROM orders WHERE code LIKE '%$search%'";
     $data = executeResult($sql);
-    // if ($data > 0) {
-    //  foreach($data as $item){
-    //     echo '
-    //         Họ tên : '.$item['fullname'].'
-    //         Email : '.$item['email'].'
-    //         Phone : '.$item['phone_number'].'
-    //         Address : '.$item['address'].'
-    //         Code : '.$item['code'].'
-    //     ';
-    //  }
-    //   } else {
-    //     echo "Không tìm thấy đơn hàng nào!";
-    //   }
       
 ?>
 <div class="row" style="margin-top:20px;">
@@ -56,6 +43,7 @@ $baseUrl = '../';
                 <th>Ngày tạo đơn</th>
                 <th>Tổng tiền</th>
                 <th>Order Code</th>
+                <th style="width: 50px;">Trạng thái </th>
             </tr>
         </thead>
         <tbody>
@@ -74,17 +62,28 @@ $baseUrl = '../';
             $index = 0 ;
            if($data>0){
             foreach($data as $item) {
-                echo '             
-                <tr>
-                            <th><a href="detail.php?id='.$item['id'].'">'.(++$index).'</a></th>
-                            <td> <a href="detail.php?id='.$item['id'].'">'.$item['fullname'].'</a></td>
-                            <td>'.$item['email'].'</td>
-                            <td>'.$item['phone_number'].'</td>
-                            <td>'.$item['address'].'</td>
-                            <td>'.$item['order_date'].'</td>
-                            <td>$'.number_format($item['total_money']).' </td>
-                            <td>'.$item['code'].'</td>      
-                            ';
+                echo '<tr>
+                <th><a href="detail.php?id='.$item['id'].'">'.(++$index).'</a></th>
+                <td> <a href="detail.php?id='.$item['id'].'">'.$item['fullname'].'</a></td>
+                <td>'.$item['email'].'</td>
+                <td>'.$item['phone_number'].'</td>
+                <td>'.$item['address'].'</td>
+                <td>'.$item['order_date'].'</td>
+                <td>$   '.number_format($item['total_money']).' </td>
+                <td>'.$item['code'].'</td>      
+                <td style="width: 50px">
+                ';
+                
+                if($item['status']==0){
+                    echo '<button onclick="changeStatus('.$item['id'].',1)" class="btn btn-success mb-1">Approve</button>
+                    <button onclick="changeStatus('.$item['id'].',2)" class="btn btn-danger">Cancel</button>';
+                }if($item['status']==1){
+                    echo '<label class="badge badge-success" for="">Approved</label>';
+                }if($item['status']==2){
+                    echo '<label class="badge badge-danger" for="">Cancel</label>';
+                }
+                echo ' </td>
+                             </tr>';
                         }
            }
             ?>
@@ -92,6 +91,17 @@ $baseUrl = '../';
     </table>
 </div>
 <div></div>
+<script type="text/javascript">
+function changeStatus(id, status) {
+    $.post('form_api.php', {
+        'id': id,
+        'status': status,
+        'action': 'update_status'
+    }, function(data) {
+        location.reload()
+    })
+}
+</script>
 <?php
     require_once('../layouts/footer.php')
 ?>
