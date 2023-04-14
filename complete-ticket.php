@@ -1,7 +1,6 @@
 <?php
-$title="Complete-ticket";
-include('header.php');
-
+$title ="Complete ticket";
+include('header.php')
 ?>
 <style>
 .page-title {
@@ -55,18 +54,20 @@ include('header.php');
     font-weight: bold;
     border-radius: 0 0 0 0;
     color: white;
-    background-color: #121F6A;
+    background-color: #040D25;
     border: none
 }
 
 .com-button-edit:hover {
-    color: #121F6A;
+    color: #040D25;
     background-color: white;
-    border: 4px solid #121F6A;
+    border: 4px solid #040D25;
 }
 </style>
+
+
 <div class="row align-items-center position-relative"
-    style="height: 320px;background-image: url('asset/img/ticketbanner.jpg');background-size:cover; margin-top:-180px; ">
+    style="height: 320px;background-color: #040D25; margin-top:-180px; ">
     <div class="page-title col-12 col-md-6">
         SEE YOU SOON
     </div>
@@ -74,19 +75,23 @@ include('header.php');
 <div class="container col-12" style="height: 50px;"></div>
 
 <div class="row d-flex justify-content-center">
-    <div class="text-center" style="width:900px;height:450px;background-color:#F6F6F6; box-shadow: 1px 10px 15px gray;">
-        <img class="img-fluid" style="width:18%;margin-top:50px;margin-bottom:10px"
-            src="https://www.seekpng.com/png/detail/48-486207_ticket-icon-tickets-vector-icon.png" alt="">
+    <div class="text-center" style="width:900px;height:450px;background-color:white; box-shadow: 1px 10px 15px gray;">
+        <img class="img-fluid" style="width:22%;margin-top:50px;margin-bottom:10px"
+            src="https://i.ibb.co/KqhqTnN/COMPLETE-288x.png" alt="">
         <div>
             <h2 style="font-weight: 600;">Your ticket order is completed</h2>
         </div>
         <div>
             <p class="text-muted" style="font-size:15px">You will receive your ticket in your email later</p>
         </div>
-        <a href="index.php"><button style="margin-top:30px;" type="button" class="com-button-edit">Explore
+        <a href="index.php"><button style="margin-top:20px;" type="button" class="com-button-edit">Explore
                 More</button></a>
     </div>
+
 </div>
+
+
+
 <div class="container col-12" style="height: 50px;"></div>
 <?php
 include('footer.php')

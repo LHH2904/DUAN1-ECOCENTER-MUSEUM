@@ -18,7 +18,7 @@ input::-webkit-inner-spin-button {
     position: absolute;
     transform: translate(-50% -50%);
     left: 210px;
-    top: 74%;
+    top: 76%;
 }
 
 .visit-button-edit {
@@ -40,9 +40,9 @@ input::-webkit-inner-spin-button {
 .are-u-mem {
     height: 60px;
     width: 100%;
-    background-color: #E2F0FA;
-    border: 1px solid #8FCFED;
-    border-left: 6px solid #2A8CE8;
+    background-color: white;
+    border: 1px solid #040D25;
+    border-left: 6px solid #040D25;
     margin-bottom: 30px;
     padding-left: 20px;
 }
@@ -50,8 +50,8 @@ input::-webkit-inner-spin-button {
 .who-coming {
     height: 450px;
     width: 100%;
-    background-color: #E2F0FA;
-    border: 1px solid #8FCFED;
+    background-color: white;
+    border: 1px solid #040D25;
     margin-bottom: 20px;
     padding-left: 20px;
     padding-top: 20px;
@@ -64,8 +64,8 @@ input::-webkit-inner-spin-button {
     background-color: #E2F0FA;
     padding-top: 20px;
     /* background-color:#2A8CE8; */
-    background-image: linear-gradient(to right, #1B3872, #101F53);
-    /* background-color: #1B3872; */
+    /* background-image: linear-gradient(to right, #1B3872, #101F53); */
+    background-color: #040D25;
     color: white;
 }
 
@@ -82,19 +82,19 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     border: none;
     /* background-image: linear-gradient(to right, #1B3872 , #101F53); */
-    background-color: #121F6A;
+    background-color: #040D25;
     font-size: 17px;
 
 }
 
 .ticket-order-btn:hover {
-    border: 4px solid #121F6A;
+    border: 4px solid #040D25;
     background-color: white;
-    color: #121F6A;
+    color: #040D25;
 }
 </style>
 <div class="row align-items-center position-relative"
-    style="height: 320px;background-image: url('asset/img/ticketbanner.jpg');background-size:cover; margin-top:-180px; ">
+    style="height: 350px;background-image: url('asset/img/ticketbanner.jpg');background-size:cover; margin-top:-180px; ">
     <div class="page-title col-12 col-md-6">
         TICKETING
     </div>
@@ -107,44 +107,44 @@ input::-webkit-inner-spin-button {
         <div class="row">
             <div class="col-8 col-md-8">
                 <div class="are-u-mem" style="padding-top:16px;">
-                    <i class="fa-solid fa-circle-exclamation" style="color:#2A8CE8"></i>&ensp;Are you a member? <a
+                    <i class="fa-solid fa-circle-exclamation" style="color:#040D25"></i>&ensp;Are you a member? <a
                         href="" style="color:black;text-decoration:underline">Log in</a> for free & discounted tickets.
                     <a href="" style="color:black;text-decoration:underline">Sign up</a> now!
                 </div>
                 <div class="who-coming">
-                    <p class="col-12" style="font-size:20px; font-weight:bold;color:#121F6A;margin-bottom:50px;">Who’s
+                    <p class="col-12" style="font-size:20px; font-weight:bold;color:#040D25;margin-bottom:50px;">Who’s
                         coming to the museum?</p>
                     <div class="d-flex" style=" gap:50px;margin-bottom:30px;">
-                        <p class="col-4" style="border-bottom:1px solid #8FCFED;height:30px;">Ticket Type </p>
-                        <p class="col-3 text-right" style="border-bottom:1px solid #8FCFED;height:30px; ">Price</p>
-                        <p class="col-3 text-right" style="border-bottom:1px solid #8FCFED;height:30px; ">Quantity</p>
+                        <p class="col-4" style="border-bottom:1px solid #040D25;height:30px;">Ticket Type </p>
+                        <p class="col-3 text-right" style="border-bottom:1px solid #040D25;height:30px; ">Price</p>
+                        <p class="col-3 text-right" style="border-bottom:1px solid #040D25;height:30px; ">Quantity</p>
                     </div>
                     <div class="d-flex" style=" gap:50px;margin-bottom:50px;">
                         <p class="col-4" style="height:30px;"><span
-                                style="color:#162B63;font-size:20px;font-weight:bold">Adult</span><br>Ages 12+</p>
+                                style="color:#040D25;font-size:20px;font-weight:bold">Adult</span><br>Ages 12+</p>
                         <p class="col-3 text-right" style="height:30px; padding-top:15px;">$20.95</p>
                         <p style="height:30px; padding-top:20px;z-index:10; margin-left:20px;"
                             class="quantity col-3 d-flex   align-items-center justify-content-center">
                             <button type="button" class="quantity__minus btn btn-primary"
-                                style="background-color:#121F6A; border:1px solid black; color:white;  border-radius: 4px 0px 0px 4px;font-weight:bold; width:30px;height:30px;padding: 0px;">-</button>
+                                style="background-color:#040D25; border:1px solid black; color:white;  border-radius: 4px 0px 0px 4px;font-weight:bold; width:30px;height:30px;padding: 0px;">-</button>
                             <input style="width: 50px;height:30px; text-align:center; border:1px solid #162B63"
                                 class="quantity__input" type="number" value="0" min="0" name="num_adult">
                             <button type="button" class="quantity__plus btn btn-primary"
-                                style="background-color:#121F6A; border:1px solid black; color:white; border-radius: 0px 4px 4px 0px;font-weight:bold;width:30px;height:30px;padding: 0px;">+</button>
+                                style="background-color:#040D25; border:1px solid black; color:white; border-radius: 0px 4px 4px 0px;font-weight:bold;width:30px;height:30px;padding: 0px;">+</button>
                         </p>
                     </div>
                     <div class="d-flex" style=" gap:50px;margin-bottom:50px;">
                         <p class="col-4" style="height:30px;"><span
-                                style="color:#162B63;font-size:20px;font-weight:bold">Child</span><br>Ages 3-11</p>
+                                style="color:#040D25;font-size:20px;font-weight:bold">Child</span><br>Ages 3-11</p>
                         <p class="col-3 text-right" style="height:30px; padding-top:15px;">$10.95</p>
                         <p style="height:30px; padding-top:20px;z-index:10; margin-left:20px;"
                             class="quantity col-3 d-flex   align-items-center justify-content-center">
                             <button type="button" class="quantity__minus btn btn-primary"
-                                style="background-color:#121F6A; border:1px solid black; color:white;  border-radius: 4px 0px 0px 4px;font-weight:bold; width:30px;height:30px;padding: 0px;">-</button>
+                                style="background-color:#040D25; border:1px solid black; color:white;  border-radius: 4px 0px 0px 4px;font-weight:bold; width:30px;height:30px;padding: 0px;">-</button>
                             <input style="width: 50px; text-align:center;height:30px;; border:1px solid #162B63"
                                 class="quantity__input" type="number" value="0" min="0" name="num_child">
                             <button type="button" class="quantity__plus btn btn-primary"
-                                style="background-color:#121F6A; border:1px solid black; color:white; border-radius: 0px 4px 4px 0px;font-weight:bold;width:30px;height:30px;padding: 0px;">+</button>
+                                style="background-color:#040D25; border:1px solid black; color:white; border-radius: 0px 4px 4px 0px;font-weight:bold;width:30px;height:30px;padding: 0px;">+</button>
                         </p>
                     </div>
 

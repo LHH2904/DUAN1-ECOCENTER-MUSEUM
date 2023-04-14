@@ -21,7 +21,7 @@ if(isset($_POST['num_child'])) {
     position: absolute;
     transform: translate(-50% -50%);
     left: 210px;
-    top: 74%;
+    top: 76%;
 }
 
 .visit-button-edit {
@@ -43,12 +43,13 @@ if(isset($_POST['num_child'])) {
 .are-u-mem {
     height: 60px;
     width: 100%;
-    background-color: #E2F0FA;
-    border: 1px solid #8FCFED;
-    border-left: 6px solid #2A8CE8;
+    background-color: white;
+    border: 1px solid #040D25;
+    border-left: 6px solid #040D25;
     margin-bottom: 30px;
     padding-left: 20px;
 }
+
 
 .who-coming {
     height: 450px;
@@ -64,8 +65,8 @@ if(isset($_POST['num_child'])) {
 .ticket-info {
     height: 480px;
     width: 100%;
-    background-color: #E2F0FA;
-    border: 1px solid #8FCFED;
+    background-color: white;
+    border: 1px solid #040D25;
     margin-bottom: 20px;
     padding-left: 20px;
     padding-top: 20px;
@@ -75,10 +76,10 @@ if(isset($_POST['num_child'])) {
 .order-summary {
     height: 150px;
     width: 100%;
-    background-color: #E2F0FA;
+    /* background-color: #E2F0FA; */
     padding-top: 20px;
-    /* background-color:#2A8CE8; */
-    background-image: linear-gradient(to right, #1B3872, #101F53);
+    background-color: #040D25;
+    /* background-image: linear-gradient(to right, #1B3872, #101F53); */
     color: white;
 }
 
@@ -89,10 +90,10 @@ if(isset($_POST['num_child'])) {
 .order-summary-checkout {
     height: 250px;
     width: 100%;
-    background-color: #E2F0FA;
+    background-color: #040D25;
     padding-top: 20px;
     /* background-color:#2A8CE8; */
-    background-image: linear-gradient(to right, #1B3872, #101F53);
+    /* background-image: linear-gradient(to right, #1B3872, #101F53); */
     color: white;
 }
 
@@ -104,21 +105,21 @@ if(isset($_POST['num_child'])) {
     font-weight: bold;
     border: none;
     /* background-image: linear-gradient(to right, #1B3872 , #101F53); */
-    background-color: #121F6A;
+    background-color: #040D25;
     font-size: 17px;
 
 }
 
 .ticket-order-btn:hover {
-    border: 4px solid #121F6A;
+    border: 4px solid #040D25;
     background-color: white;
-    color: #121F6A;
+    color: #040D25;
 }
 </style>
 <div class="row align-items-center position-relative"
-    style="height: 320px;background-image: url('asset/img/ticketbanner.jpg');background-size:cover; margin-top:-180px; ">
+    style="height: 350px;background-image: url('asset/img/ticketbanner.jpg');background-size:cover; margin-top:-180px; ">
     <div class="page-title col-12 col-md-6">
-        INFO FROM YOU
+        YOUR INFO
     </div>
 </div>
 <div class="container col-12" style="height: 50px;"></div>
@@ -127,18 +128,18 @@ if(isset($_POST['num_child'])) {
     <div class="row">
         <div class="col-8 col-md-8">
             <div class="are-u-mem" style="padding-top:16px;">
-                <i class="fa-solid fa-circle-exclamation" style="color:#2A8CE8"></i>&ensp;Are you a member? <a href=""
+                <i class="fa-solid fa-circle-exclamation" style="color:#040D25"></i>&ensp;Are you a member? <a href=""
                     style="color:black;text-decoration:underline">Log in</a> for free & discounted tickets.
                 <a href="" style="color:black;text-decoration:underline">Sign up</a> now!
             </div>
             <div class="ticket-info">
-                <p class="col-12" style="font-size:20px; font-weight:bold;color:#121F6A;margin-bottom:30px;">Your
+                <p class="col-12" style="font-size:20px; font-weight:bold;color:#040D25;margin-bottom:30px;">Your
                     information</p>
                 <!-- Card input -->
                 <form method="post" onsubmit="return completeCheckoutTicket()" ;>
                     <div class=" col-12 form-outline mb-3">
 
-                        <label class="form-label" for="form4Example1" style="color:#121F6A;font-weight:bold">Payment -
+                        <label class="form-label" for="form4Example1" style="color:#040D25;font-weight:bold">Payment -
                             Card Details</label>
                         <div class="input-group"> <input type="text" class="form-control ">
                             <div class="input-group-append"> <span class="input-group-text text-muted"> <i
@@ -149,18 +150,18 @@ if(isset($_POST['num_child'])) {
                     <!-- Name input -->
                     <div class="col-12 form-outline mb-3">
                         <label class="form-label" for="form4Example1"
-                            style="color:#121F6A;font-weight:bold">Name</label>
+                            style="color:#040D25;font-weight:bold">Name</label>
                         <input name="fullname" type=" text" id="form4Example1" class="form-control " />
                     </div>
                     <!-- Email input -->
                     <div class="col-12 form-outline mb-3">
-                        <label class="form-label" for="form4Example2" style="color:#121F6A;font-weight:bold">Email
+                        <label class="form-label" for="form4Example2" style="color:#040D25;font-weight:bold">Email
                             address</label>
                         <input name="email" type="email" id="form4Example2" class="form-control " />
                     </div>
                     <!-- Phone input -->
                     <div class="col-12 form-outline mb-3">
-                        <label class="form-label" for="form4Example2" style="color:#121F6A;font-weight:bold">Phone
+                        <label class="form-label" for="form4Example2" style="color:#040D25;font-weight:bold">Phone
                             number</label>
                         <input name="phone_number" type="text" id="form4Example2" class="form-control" />
                     </div>

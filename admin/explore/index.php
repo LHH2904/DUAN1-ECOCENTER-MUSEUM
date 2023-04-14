@@ -6,9 +6,24 @@ $baseUrl = '../';
 	$data = executeResult($sql);
 ?>
 <div class="row" style="margin-top:20px;">
-    <div class="col-md-12">
+    <div class="col-md-6">
         <h3 class=" mt-2">Explore Management</h3>
         <a href="editor.php"><button class="btn btn-success mb-2">Add explore</button></a>
+    </div>
+    <div class="col-md-6">
+        <form action="searchExplore.php" method="POST"
+            class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <input name="search" type="text" class="form-control bg-light border-1 small"
+                    placeholder="Search Explore title ..." aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <a href="searchExplore.php"><button class="btn " style="background-color: #2B3467;color:white"
+                            type="submit">
+                            <i class="fas fa-search fa-sm"></i></a>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
     <table class="table table-bordered table-hover table-responsive">
         <thead>

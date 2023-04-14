@@ -22,11 +22,9 @@ $products = executeResult($sql);
     background-color: #EFBF29;
     cursor: pointer;
     margin-bottom: 15px;
-    moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-
 }
 
 .main-button-edit:hover {
@@ -34,7 +32,7 @@ $products = executeResult($sql);
     background-color: rgba(252, 252, 252, 0.1) !important;
     border: 4px solid #EFBF29 !important;
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
+
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;

@@ -8,8 +8,7 @@ $baseUrl = '../';
         $search = $_POST['search'];
     }
     $sql = "SELECT * FROM orders WHERE code LIKE '%$search%'";
-    $data = executeResult($sql);
-      
+    $data = executeResult($sql);  
 ?>
 <div class="row" style="margin-top:20px;">
     <div class="col-md-6">
@@ -90,7 +89,6 @@ $baseUrl = '../';
     </tbody>
     </table>
 </div>
-<div></div>
 <script type="text/javascript">
 function changeStatus(id, status) {
     $.post('form_api.php', {
